@@ -1,0 +1,3 @@
+[submodule "libs/map-consistency"]
+	path = libs/map-consistency
+	url = https://github.com/shrinivas96/map-consistency.git
