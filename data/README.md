@@ -1,0 +1,7 @@
+This folder contains a few files that list the raw measurements. These were taken by letting a robot in ROS run around in an environment (`turtlebot3_house` with `turtlebot3_waffle`). The data is saved in a crude way: by writting a simple subscriber to the `/scan/` topic and then dumping the values in a text file. This is present inside the `data/scan_topic_dump.dat` file.
+
+`data/scan_sim_real.dat` contains two lines of raw range values. In the first line is the simulated range values created using the [`occupancy_grid_utils`](https://github.com/clearpathrobotics/occupancy_grid_utils/blob/noetic-devel/src/ray_tracer.cpp#L180) library (code not available in this repository). The second line is actual raw scan from that pose (last scan in `data/scan_topic_dump.dat`). Ideally, these both scans should be nearly the same.
+
+`data/scans_6444_70.dat` contains two range values just copy pasted from `data/scan_topic_dump.dat`. They are for the time steps secs: 64, nsecs: 442000000, and secs: 70, nsecs: 850000000 respectively. 
+
+These files are just for quick prototyping to load the range values into variables without having to write too much code to automatically take these values from ROSbags or subscribe to scan topics.
